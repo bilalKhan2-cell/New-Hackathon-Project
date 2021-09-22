@@ -1,0 +1,120 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    body{
+		background-color:white;
+	}
+	.contact{
+		padding: 4%;
+		height: 400px;
+	}
+	.col-md-3{
+		background-color:lightseagreen;
+		padding: 4%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.contact-info{
+		margin-top:80%;
+	}
+	.contact-info img{
+		margin-bottom: 15%;
+	}
+	.contact-info h2{
+		margin-bottom: 10%;
+	}
+	.col-md-9{
+		background: #fff;
+		padding: 3%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+	.contact-form label{
+		font-weight:600;
+	}
+	.contact-form button{
+		background: #25274d;
+		color: #fff;
+		font-weight: 600;
+		width: 25%;
+	}
+	.contact-form button:focus{
+		box-shadow:none;
+	}
+</style>
+        </head>
+        <body>
+<div class="container contact">
+	<div class="row" style="margin-top:-20px;">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<input type="text" placeholder="Enter First Name" id="teacherFirstName" class="col-lg form-control"><br>
+                <button type="submit" onclick="fetchData()" class="btn btn-danger text-white">Generate Data</button>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="fname">First Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="lname">Last Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+				  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="lname">Gender:</label>
+                    <div class="col-sm-10">          
+                      <input type="text" class="form-control" id="gender" placeholder="Enter Last Name" name="lname">
+                    </div>
+                    
+				</div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-4" for="comment">Contact Info:</label>
+                    <div class="col-sm-10">
+                      <input type="tel" maxlength="11" class="form-control" rows="5" id="contact"></textarea>
+                    </div>
+                  </div>
+				
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Country:</label>
+				  <div class="col-sm-10">
+					<input type="text" class="form-control" rows="5" id="country"></textarea>
+				  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-4" for="comment">Date of Birth:</label>
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" rows="5" id="birth"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="comment">City:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" rows="5" id="city"></textarea>
+                    </div>
+                  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" onclick="change()" class="btn btn-default">Update Data</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+
+<script src="changeTeachersData.js"></script>
+</body>
+</html>

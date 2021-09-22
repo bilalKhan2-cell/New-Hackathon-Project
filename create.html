@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</head>
+<body class="bg-primary">
+    <div class="col-md-4 login-form-2 w-50" style="background-color: white; color:navy;">
+        <h3 style="text-align:center; text-decoration: underline; font-size:40px; font-family: Georgia, 'Times New Roman', Times, serif; color: navy;">Create User</h3><br>
+        
+            <div class="form-group">
+                <input type="email" id="email"  required class="form-control" style="border:1px solid black; width:280px; margin: 0 auto;" placeholder="Your Email *" value="" />
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="password" required id="password" class="form-control" style="border:1px solid black; margin:0 auto; width:280px;" placeholder="Your Password *" value="" />
+            </div>
+            <br>
+            
+            <div class="form-group">
+                    <select class="bg-danger" aria-placeholder="Select User Criteria" id="select" style="height:40px; border-radius: 10px; text-align:center; width:240px; margin-left:25%; color:white;">
+                       <option value=" " id="null">Select Registration Method</option>
+                        <option value="Admin" id="Admin">Admin</option>
+                        <option value="Teacher" id="Teacher">Teacher</option>
+                        <option value="Student" id="Student">Student</option>
+                    </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <button onclick = "submit()" class="btnSubmit" value="Login" >Submit Data</button>
+            </div>
+            
+            <div class="form-group">
+                <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+            </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+
+      <script src="app.js"></script>
+</body>
+</html>

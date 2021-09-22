@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white">
+    <section class="h-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="download.png" style="margin-top:60px; width:500px; height: 600px;" class="img-fluid"
+                alt="Sample image">
+            </div>
+            <div style="margin-top:20px;" class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">      
+                
+                <div class="form-outline mb-4">
+                  <input type="email" required id="user" class="form-control form-control-lg"
+                    placeholder="Enter a valid email address" />
+                </div>
+      
+                <div class="form-outline mb-3">
+                  <input type="password" required id="password" class="form-control form-control-lg"
+                    placeholder="Enter password" />
+                </div>
+                
+                <select style="background-color:royalblue; text-align:center; color:white; height:35px; width:120px;" id="userSelect">
+                    <option value="Admin" id="admin">Admin</option>
+                    <option value="Teacher" id="teacher">Teacher</option>
+                    <option value="Student" id="stduent">Student</option>
+                </select>
+      
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="checkUser()">Login</button>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#!" class="text-body">Forgot password?</a>
+                  </div>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="create.html"
+                      class="link-danger">Register</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div style="clear: both; position: absolute; width:100%; top:0px;" class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+          <div class="text-white text-center mb-3 mb-md-0" style="line-height:0px; height:0px; font-size:28px; position: relative; margin-bottom: 0;">
+        Student Management System
+          </div>         
+        </div>
+      </section>
+
+      <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+
+      <script src="user.js"></script>
+</body>
+</html>
